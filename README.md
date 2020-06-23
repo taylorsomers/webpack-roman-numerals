@@ -1,32 +1,14 @@
-Get Started:
+# Roman Numeral Converter
 
-FIRST: [REMEMBER TO (1) CHANGE package.json PROJECT NAME AND DESCRIPTION TO CURRENT PROJECT NAME AND DESCRIPTION, (2) CHANGE TITLE OF HtmlWebpackPlugin IN webpack.config.js TO CURRENT PROJECT NAME, AND (3) CHANGE TITLE OF project-name.js IN SRC DIRECTORY TO NAME OF CURRENT PROJECT.]
-
-SECOND:
-  $ npm install
-  $ npm install dotenv-webpack --save-dev
-  $ git init
-  $ git add .gitignore
-  $ git commit -m "Activate .gitignore"
-  $ npm run build
-  $ git add .
-  $ git commit -m "Initial global commit"
-
-  $ npm run start (to initiate live server)
-
-# [Program Title]
-
-  ### By [Author(s)]
+  ### By Taylor Somers & Tyson Lackey
 
 ## Description
 
-  [Description of program functionality & intent presented as an elevator pitch.]
+  This is a comprehensive reorganization of a program produced earlier, reformatted for use with WebPack functionality. The UI is essentially the same as the initial program, created with HTML, but the business logic and UI logic have been entirely separated into their own files and the entire range of commonly used plugins has been added. The program uses JavaScript and jQuery to produce a converter that takes inputted integers and converts them to Roman Numerals.
 
 ## Languages & Technologies Used:
 
   ### Programming Languages & Libraries
-  * Bootstrap
-  * CSS
   * HTML
   * JavaScript
   * jQuery
@@ -43,7 +25,7 @@ SECOND:
 ## Installation
 
   1.  Download a web browser, such as Apple Safari, Brave, Google Chrome, Microsoft Edge, Mozilla Firefox, or Yandex.
-  2.  Navigate to [repository].
+  2.  Navigate to https://github.com/taylorsomers/webpack-roman-numerals.
   3.  Click the green "Clone or download" button at the right of the screen.
   4.  Select "Download ZIP."
   5.  Use a file extractor or unzip program (such as PeaZip, Unzipper, WinZip, Zipware, or 7-ZIP) to extract the ZIP files onto your computer.
@@ -74,8 +56,8 @@ SECOND:
 ### Contributors
 
   * Taylor Somers
-  * [Other Contributor(s): Anyone who contributed at least %5 of the total product.]
+  * Tyson Lackey
 
 ### License
 
-This website is licensed under the GNU General Public License GPLv3. (C) 2020 Taylor Somers. All rights reserved.
+This website is licensed under the GNU General Public License GPLv3. (C) 2020 Taylor Somers, Tyson Lackey. All rights reserved.
