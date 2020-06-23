@@ -54,9 +54,9 @@ export function translator(int) {
   let hundredsArray = [];
   let thousandsArray = [];
   let posCount = 0;
-  let output;
+  let output = "";
 
-  if (!isError(int)){
+  if (isError(int) === false){
     for (let i=int.length - 1; i >= 0; i--){
       if (posCount === 0) {
         onesArray = arrayBuilder(int[i]);
