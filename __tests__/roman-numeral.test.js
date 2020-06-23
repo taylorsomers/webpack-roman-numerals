@@ -26,4 +26,9 @@ describe ('translator', () => {
     const testInput = translator("4");
     expect (testInput).toEqual("IV");
   });
+
+  test ("ones, tens, hundreds, and thousands need to evaulate separately", () => {
+    const testInput = translator("99");
+    expect (testInput).toEqual("XCIX");
+  });
 });
