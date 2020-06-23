@@ -21,4 +21,9 @@ describe ('translator', () => {
     const testInput = translator("1111");
     expect (testInput).toEqual("MCXI");
   });
+
+  test ("if the sum of all symbols requires more than 3 consecutive cases of the same symbol, use subtraction to reach the sum of consecutive values", () => {
+    const testInput = translator("4");
+    expect (testInput).toEqual("IV");
+  });
 });
