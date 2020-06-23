@@ -1,5 +1,5 @@
 //converts integer into roman numberal notation array
-export function arrayBuilder(string){
+function arrayBuilder(string){
   let array = [];
   let int = parseInt(string);
 
@@ -13,7 +13,7 @@ export function arrayBuilder(string){
       intLength -= 1;
     }
   } else if (int === 4){
-    array.push("1", "5");      
+    array.push("1", "5");
   } else if (int < 4) {
     let intLength = int;
     while (intLength > 0){
@@ -25,7 +25,7 @@ export function arrayBuilder(string){
 }
 
 //converts array of integers into roman numeral values
-export function converter(array){
+function converter(array){
   let newArray = [];
   for (const element of array){
     if (element === "1000"){
@@ -54,24 +54,39 @@ export function translator(int) {
   let hundredsArray = [];
   let thousandsArray = [];
   let posCount = 0;
-  for (let i=int.length - 1; i >= 0; i--){
-    if (posCount === 0) {
-      onesArray = arrayBuilder(int[i]);
-    } else if (posCount === 1) {
-      for (const element of arrayBuilder(int[i])){
-        tensArray.push(element + "0");
+  let output;
+
+  if (!isError(int)){
+    for (let i=int.length - 1; i >= 0; i--){
+      if (posCount === 0) {
+        onesArray = arrayBuilder(int[i]);
+      } else if (posCount === 1) {
+        for (const element of arrayBuilder(int[i])){
+          tensArray.push(element + "0");
+        }
+      } else if (posCount === 2) {
+        for (const element of arrayBuilder(int[i])){
+          hundredsArray.push(element + "00");
+        }
+      } else if (posCount === 3) {
+        for (const element of arrayBuilder(int[i])){
+          thousandsArray.push(element + "000");
+        }
       }
-    } else if (posCount === 2) {
-      for (const element of arrayBuilder(int[i])){
-        hundredsArray.push(element + "00");
-      }
-    } else if (posCount === 3) {
-      for (const element of arrayBuilder(int[i])){
-        thousandsArray.push(element + "000");
-      }
+      posCount += 1;
     }
-    posCount += 1;
+    output = (converter(thousandsArray).concat(converter(hundredsArray), converter(tensArray), converter(onesArray))).join("");
+  } else {
+    output = "Please enter a number between 1-3999";
   }
-  let output = (converter(thousandsArray).concat(converter(hundredsArray), converter(tensArray), converter(onesArray))).join("");
   return output;
+}
+
+//error handling
+function isError(int) {
+  if (int > 3999 || int < 1) {
+    return true;
+  } else {
+    return false;
+  }
 }
