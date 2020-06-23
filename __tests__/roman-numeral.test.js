@@ -6,4 +6,6 @@ describe ('translator', () => {
     const testOutput = translator(4000);
     expect (testOutput).toEqual("Please enter a number between 1-3999");
   });
+
+  test ()
 });
