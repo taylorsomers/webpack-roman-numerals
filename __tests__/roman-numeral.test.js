@@ -11,4 +11,9 @@ describe ('translator', () => {
     const testInput = translator("10");
     expect (testInput).toEqual("X");
   });
+
+  test ("the entered number will equal the sum of all symbols", () => {
+    const testInput = translator("60");
+    expect (testInput).toEqual("LX");
+  });
 });
