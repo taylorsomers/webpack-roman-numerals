@@ -16,4 +16,9 @@ describe ('translator', () => {
     const testInput = translator("60");
     expect (testInput).toEqual("LX");
   });
+
+  test ("Symbols are displayed largest to smallest", () => {
+    const testInput = translator("1111");
+    expect (testInput).toEqual("MCXI");
+  });
 });
